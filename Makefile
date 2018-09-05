@@ -2,9 +2,9 @@
 
 version = 2.7
 
-all: .installed.cfgs
+all: build
 
-.installed.cfg: bin/buildout *.cfg
+build: bin/buildout *.cfg
 	bin/buildout
 
 bin/buildout: bin/pip
