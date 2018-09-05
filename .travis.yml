@@ -19,4 +19,4 @@ before_install:
 install:
   - pip install -r requirements.txt
 script:
-  - bin/buildout -c plone-$PLONE_VERSION.cfg
+  - buildout -c plone-$PLONE_VERSION.cfg
