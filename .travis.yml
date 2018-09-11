@@ -16,7 +16,7 @@ env:
     - PLONE_VERSION=4.3.x BUILDOUT=live
     - PLONE_VERSION=5.0.x BUILDOUT=live
     - PLONE_VERSION=5.1.x BUILDOUT=live
-    before_install:
+before_install:
   - mkdir -p $HOME/buildout-cache/{eggs,downloads}
   - mkdir $HOME/.buildout
   - echo "[buildout]" > $HOME/.buildout/default.cfg
