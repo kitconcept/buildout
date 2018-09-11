@@ -7,10 +7,16 @@ cache:
     - $HOME/buildout-cache
 env:
   matrix:
-    - PLONE_VERSION=4.3.x
-    - PLONE_VERSION=5.0.x
-    - PLONE_VERSION=5.1.x
-before_install:
+    - PLONE_VERSION=4.3.x BUILDOUT=buildout
+    - PLONE_VERSION=5.0.x BUILDOUT=buildout
+    - PLONE_VERSION=5.1.x BUILDOUT=buildout
+    - PLONE_VERSION=4.3.x BUILDOUT=staging
+    - PLONE_VERSION=5.0.x BUILDOUT=staging
+    - PLONE_VERSION=5.1.x BUILDOUT=staging
+    - PLONE_VERSION=4.3.x BUILDOUT=live
+    - PLONE_VERSION=5.0.x BUILDOUT=live
+    - PLONE_VERSION=5.1.x BUILDOUT=live
+    before_install:
   - mkdir -p $HOME/buildout-cache/{eggs,downloads}
   - mkdir $HOME/.buildout
   - echo "[buildout]" > $HOME/.buildout/default.cfg
@@ -19,4 +25,5 @@ before_install:
 install:
   - pip install -r requirements.txt
 script:
-  - buildout -c plone-$PLONE_VERSION.cfg
+  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" buildout.cfg
+  - buildout -c plone-$BUILDOUT.cfg
