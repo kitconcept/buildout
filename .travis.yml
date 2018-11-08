@@ -10,12 +10,13 @@ env:
     - PLONE_VERSION=4.3.x BUILDOUT=buildout
     - PLONE_VERSION=5.0.x BUILDOUT=buildout
     - PLONE_VERSION=5.1.x BUILDOUT=buildout
-    - PLONE_VERSION=4.3.x BUILDOUT=staging
-    - PLONE_VERSION=5.0.x BUILDOUT=staging
-    - PLONE_VERSION=5.1.x BUILDOUT=staging
-    - PLONE_VERSION=4.3.x BUILDOUT=live
-    - PLONE_VERSION=5.0.x BUILDOUT=live
-    - PLONE_VERSION=5.1.x BUILDOUT=live
+    - PLONE_VERSION=5.2.x BUILDOUT=buildout
+    # - PLONE_VERSION=4.3.x BUILDOUT=staging
+    # - PLONE_VERSION=5.0.x BUILDOUT=staging
+    # - PLONE_VERSION=5.1.x BUILDOUT=staging
+    # - PLONE_VERSION=4.3.x BUILDOUT=live
+    # - PLONE_VERSION=5.0.x BUILDOUT=live
+    # - PLONE_VERSION=5.1.x BUILDOUT=live
 before_install:
   - mkdir -p $HOME/buildout-cache/{eggs,downloads}
   - mkdir $HOME/.buildout
