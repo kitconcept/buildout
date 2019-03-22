@@ -5,6 +5,10 @@ version = 2.7
 all: .installed.cfg
 	bin/test
 
+update:
+	wget -O Makefile https://raw.githubusercontent.com/kitconcept/buildout/master/Makefile
+	wget -O requirements.txt https://raw.githubusercontent.com/kitconcept/buildout/master/requirements.txt
+
 .installed.cfg: bin/buildout *.cfg
 	bin/buildout
 
