@@ -17,6 +17,21 @@ bin/buildout: bin/pip
 	bin/pip install -r requirements.txt
 	@touch -c $@
 
+build-plone-4.3: .installed.cfg
+	bin/pip install --upgrade pip
+	bin/pip install -r requirements.txt
+	bin/buildout -c plone-4.3.x.cfg
+
+build-plone-5.0: .installed.cfg
+	bin/pip install --upgrade pip
+	bin/pip install -r requirements.txt
+	bin/buildout -c plone-5.0.x.cfg
+
+build-plone-5.1: .installed.cfg
+	bin/pip install --upgrade pip
+	bin/pip install -r requirements.txt
+	bin/buildout -c plone-5.1.x.cfg
+	
 build-plone-5.2: .installed.cfg
 	bin/pip install --upgrade pip
 	bin/pip install -r requirements.txt
