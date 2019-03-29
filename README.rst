@@ -56,3 +56,15 @@ kitconcept Buildout expects a base.cfg configuration to be present in your build
     zc.buildout =
     zc.recipe.egg = 2.0.3
 
+
+Make Commands
+-------------
+
+Available make commands:
+
+- Update Makefile and Buildout: make update
+- Build Plone 4.3.x: make build-plone-4.3
+- Build Plone 5.0.x: make build-plone-5.0
+- Build Plone 5.1.x: make build-plone-5.1
+- Build Plone 5.2.x: make build-plone-5.2
+- Build Plone 5.2.x with Python 3: make build-py3
