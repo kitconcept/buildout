@@ -26,5 +26,5 @@ before_install:
 install:
   - pip install -r requirements.txt
 script:
-  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" buildout.cfg
-  - buildout -c $BUILDOUT.cfg
+  - sed -ie "s#plone-x.x.x.cfg#plone-$PLONE_VERSION.cfg#" travis.cfg
+  - buildout -c travis.cfg
