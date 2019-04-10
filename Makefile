@@ -13,7 +13,6 @@ RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
 all: .installed.cfg
-	bin/test
 
 # Add the following 'help' target to your Makefile
 # And add help text after each target name starting with '\#\#'
@@ -55,7 +54,7 @@ build-plone-5.1: .installed.cfg  ## Build Plone 5.1
 	bin/pip install --upgrade pip
 	bin/pip install -r requirements.txt
 	bin/buildout -c plone-5.1.x.cfg
-	
+
 .PHONY: Build Plone 5.2
 build-plone-5.2: .installed.cfg  ## Build Plone 5.2
 	bin/pip install --upgrade pip
