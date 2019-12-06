@@ -19,6 +19,7 @@ eggs =
     Plone
     Pillow
     kitconcept.timeline [test]
+zcml = kitconcept.timeline
 
 [dependencies]
 recipe = zc.recipe.egg
