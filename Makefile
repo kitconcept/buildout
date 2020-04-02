@@ -73,9 +73,9 @@ build-plone-5.2: .installed.cfg  ## Build Plone 5.2
 
 .PHONY: Build Plone 5.2 Performance
 build-plone-5.2-performance: .installed.cfg  ## Build Plone 5.2
-       bin/pip install --upgrade pip
-       bin/pip install -r requirements.txt
-       bin/buildout -c plone-5.2.x-performance.cfg
+	bin/pip install --upgrade pip
+	bin/pip install -r requirements.txt
+	bin/buildout -c plone-5.2.x-performance.cfg
 
 .PHONY: Test
 test:  ## Test
