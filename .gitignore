@@ -15,6 +15,7 @@
 *.eggs
 /.installed.cfg
 *.pyc
+pyvenv.cfg
 /.Python
 /include
 /lib
