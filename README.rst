@@ -33,7 +33,8 @@ This will automatically update the following files in your local folder:
 - plone-5.0.x.cfg
 - plone-5.1.x.cfg
 - plone-5.2.x.cfg
-- versions.cfg
+- versions.cfg (versions that are used for all Plone versions except Plone 5.2)
+- ci.cfg (CI configuration for GitHub actions)
 
 kitconcept Buildout expects a base.cfg configuration to be present in your buildout that contains your customizations and contains the following parts (replace collective.embeddedpage with your add-on)::
 
