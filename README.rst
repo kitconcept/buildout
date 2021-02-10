@@ -4,7 +4,15 @@
 kitconcept Buildout
 ===================
 
-Basic Buildout setup with the kitconcept best practices.
+Basic Buildout setup with the kitconcept best practices. 
+This buildout base is used in all the open source projects we help to maintain.
+
+Rationale
+---------
+
+CI systems should be stable and not rely on external resources that are subject to change. 
+Approaches like buildout.plonetest violate this principle and make the CI build fragile.
+The build can fail at any time without notice when an external resource changes.
 
 Getting started
 ---------------
@@ -67,4 +75,4 @@ Available make commands:
 - Build Plone 5.0.x: make build-plone-5.0
 - Build Plone 5.1.x: make build-plone-5.1
 - Build Plone 5.2.x: make build-plone-5.2
-- Build Plone 5.2.x with Python 3: make build-py3
+- Build Plone 5.2.x with Python 2: make build-plone-5.2-py2
