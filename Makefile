@@ -69,7 +69,7 @@ build-plone-5.1: py2  ## Build Plone 5.1
 build-plone-5.2-py: py2  ## Build Plone 5.2 with Python 2
 	bin/pip install --upgrade pip
 	bin/pip install -r requirements.txt
-	bin/buildout -c plone-5.2.x-performance.cfg
+	bin/buildout -c plone-5.2.x.cfg
 
 .PHONY: Build Plone 5.2
 build-plone-5.2: .installed.cfg  ## Build Plone 5.2
