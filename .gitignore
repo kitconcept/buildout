@@ -35,3 +35,5 @@ pip-selfcheck.json
 /.idea
 /.vscode
 /.ipython
+/.*project
+/.settings
