@@ -1,10 +1,10 @@
-.. image:: https://travis-ci.org/kitconcept/buildout.svg?branch=master
-    :target: https://travis-ci.org/kitconcept/buildout
+.. image:: https://github.com/kitconcept/buildout/actions/workflows/ci.yml/badge.svg
+  :target: https://github.com/kitconcept/buildout
 
 kitconcept Buildout
 ===================
 
-Basic Buildout setup with the kitconcept best practices. 
+Basic Python 3, Plone 5.2 Buildout setup with the kitconcept best practices.
 This buildout base is used in all the open source projects we help to maintain.
 
 Rationale
@@ -19,7 +19,7 @@ Getting started
 
 Fetch Makefile::
 
-    wget -O Makefile https://raw.githubusercontent.com/kitconcept/buildout/master/Makefile
+    wget -O Makefile https://raw.githubusercontent.com/kitconcept/buildout/5.2/Makefile
 
 Update Buildout files::
 
@@ -29,9 +29,6 @@ This will automatically update the following files in your local folder:
 
 - Makefile
 - requirements.txt
-- plone-4.3.x.cfg
-- plone-5.0.x.cfg
-- plone-5.1.x.cfg
 - plone-5.2.x.cfg
 - versions.cfg (versions that are used for all Plone versions except Plone 5.2)
 - ci.cfg (CI configuration for GitHub actions)
@@ -72,8 +69,4 @@ Make Commands
 Available make commands:
 
 - Update Makefile and Buildout: make update
-- Build Plone 4.3.x: make build-plone-4.3
-- Build Plone 5.0.x: make build-plone-5.0
-- Build Plone 5.1.x: make build-plone-5.1
 - Build Plone 5.2.x: make build-plone-5.2
-- Build Plone 5.2.x with Python 2: make build-plone-5.2-py2
