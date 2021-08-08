@@ -70,6 +70,10 @@ black:  ## Black
 	bin/code-analysis
 	if [ -f "bin/black" ]; then bin/black src/ ; fi
 
+.PHONY: zpretty
+zpretty:  ## zpretty
+	if [ -f "bin/zpretty" ]; then zpretty -i ./**/*.zcml; fi
+
 .PHONY: Build Docs
 docs:  ## Build Docs
 	bin/sphinxbuilder
